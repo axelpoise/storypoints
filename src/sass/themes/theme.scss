@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1F5F8;
+}
+
+h1, h2, p, div {
+  color: #000;
+  font-family: Arial, $font-type;
+
+}
+
+h1 {
+  font-size: 30pt;
+}

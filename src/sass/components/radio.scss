@@ -1,0 +1,90 @@
+@mixin custom-radios() {
+  //   TODO need to add for name of radio group
+  div {
+
+
+    input[type="radio"] {
+      display: none;
+
+      + label {
+        flex: 0 0 100%;
+        flex-basis: 40%;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        justify-content: center;
+
+        span {
+          margin:5px;
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          margin: -1px 4px 0 0;
+          vertical-align: middle;
+          cursor: pointer;
+          border-radius: 50%;
+          border: 2px solid #FFFFFF;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+          background-repeat: no-repeat;
+          background-position: center;
+          text-align: center;
+          line-height: 44px;
+
+          img {
+            opacity: 0;
+            transition: all .3s ease;
+          }
+        }
+        .button-description {
+          display: block;
+          text-align: center;
+          font-size: 12pt;
+          font-weight:bold;
+        }
+      }
+
+      &.color-1 + label span {
+        background-color: $color-1;
+      }
+
+      &.color-2 + label span {
+        background-color: $color-2;
+      }
+
+      &.color-3 + label span {
+        background-color: $color-3;
+      }
+
+      &.color-4 + label span {
+        background-color: $color-4;
+      }
+
+      &:checked + label span img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.effort {
+  div {
+    display: inline-flex;
+
+  }
+  @include custom-radios()
+}
+
+.complexity {
+  div {
+    display: inline-block;
+  }
+  @include custom-radios()
+}
+
+.uncertainty {
+  div {
+    display: inline-block;
+  }
+  @include custom-radios()
+}
