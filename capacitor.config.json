@@ -1,0 +1,7 @@
+{
+  "appId": "com.AgileNarrative",
+  "appName": "StoryPoints",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "build"
+}
