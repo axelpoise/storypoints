@@ -7,12 +7,11 @@
       display: none;
 
       + label {
-        flex: 0 0 100%;
-        flex-basis: 40%;
+
         color: #333;
         font-family: Arial, sans-serif;
         font-size: 14px;
-        justify-content: center;
+
 
         span {
           margin:5px;
@@ -87,4 +86,17 @@
     display: inline-block;
   }
   @include custom-radios()
+}
+
+.box {
+
+
+}
+
+.container {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
 }

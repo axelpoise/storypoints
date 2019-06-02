@@ -30,8 +30,9 @@ export default class Result extends React.Component {
 
 
         return (
-            <div className={"result"}>
+            <div className={"result container"}>
 
+                <div className={"box"}>
                 {/*<div className="result">{this.state.score}</div>*/}
                 <svg viewBox={"0 0 100 100"} preserveAspectRatio={"xMidYMid meet"}>
                     <circle cx={"50"} cy={"50"} r={"40"} fill={"white"}>
@@ -39,6 +40,7 @@ export default class Result extends React.Component {
                     <text fill={"black"} fontSize={"50"} x={"50%"} y={"50%"} dy={".3em"}
                           textAnchor={"middle"}>{this.state.score}</text>
                 </svg>
+                </div>
                 {/*<div style={{textAlign: "center"}}>*/}
                 {/*<p className={"color-"+ (1+parseInt(this.props.location.query.effort)) }>effort</p>*/}
                 {/*<p className={"color-"+ (1+parseInt(this.props.location.query.complexity))}>complexity</p>*/}
@@ -58,7 +60,7 @@ export default class Result extends React.Component {
                 {/*<span className={"bar" + (1+parseInt(this.props.location.query.uncertainty))}></span>*/}
 
                 {/*</div>*/}
-
+                <div className={"box"}>
                 <div className={"chart"}>
                     <svg viewBox={"0 0 100 65"}>
 
@@ -83,10 +85,12 @@ export default class Result extends React.Component {
                     </svg>
 
                 </div>
-
+                </div>
+                <div className={"box"}>
                 <Link to="/">
                     <button className="next-button" onClick={this.nextHandler}>Retry</button>
                 </Link>
+                </div>
             </div>
         )
     }
