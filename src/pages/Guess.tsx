@@ -46,18 +46,24 @@ export default class Guess extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Task Planner</h1>
+            <div className="container">
+                <h1 className="box" style={{margin:"0px"}}>Story Points</h1>
+                <div className="box">
                 <h2>Effort</h2>
                 <ScrumRadioGroup className="effort" name="effort" onChange={this.effortHandler}
                                  checkedValue={this.state.effort}></ScrumRadioGroup>
+                </div>
+                <div className="box">
                 <h2>Complexity</h2>
                 <ScrumRadioGroup className="complexity" name="complexity" onChange={this.complexityHandler}
                                  checkedValue={this.state.complexity}></ScrumRadioGroup>
+                </div>
+                <div  className="box">
                 <h2>Uncertainty</h2>
                 <ScrumRadioGroup className="uncertainty" name="uncertainty" onChange={this.uncertaintyHandler}
                                  checkedValue={this.state.uncertainty}></ScrumRadioGroup>
-                <Link to={{pathname: "/result", query:this.state}}><button onClick={this.handleSubmit} className="next-button">submit</button></Link>
+                </div>
+                <Link to={{pathname: "/result", query:this.state}}><button onClick={this.handleSubmit} className="next-button box">submit</button></Link>
             </div>
         )
     }
